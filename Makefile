@@ -6,7 +6,7 @@ all:
 	echo > /dev/null
 
 test:
-	/bin/true
+	true
 
 clean:
 	$(RM) *.o
