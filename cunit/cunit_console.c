@@ -13,12 +13,12 @@
     } \
   } while (false)
 
-extern CU_SuiteInfo suites[];
+extern const CU_SuiteInfo suites[];
 
 int main() {
   CU_ERROR_CHECK(CU_initialize_registry());
 
-  CU_ERROR_CHECK(CU_register_suites(suites));
+  CU_ERROR_CHECK(CU_register_suites((CU_SuiteInfo *)suites));
 
   CU_console_run_tests();
 

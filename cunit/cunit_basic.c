@@ -13,7 +13,7 @@
     } \
   } while (false)
 
-extern CU_SuiteInfo suites[];
+extern const CU_SuiteInfo suites[];
 
 int main(int argc, char * argv[]) {
   bool help = false;
@@ -69,7 +69,7 @@ int main(int argc, char * argv[]) {
 
   CU_ERROR_CHECK(CU_initialize_registry());
 
-  CU_ERROR_CHECK(CU_register_suites(suites));
+  CU_ERROR_CHECK(CU_register_suites((CU_SuiteInfo *)suites));
 
   CU_basic_set_mode(mode);
 
