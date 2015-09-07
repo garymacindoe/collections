@@ -1,7 +1,6 @@
 #include <stdbool.h>
 #include <CUnit/CUnit.h>
 #include <CUnit/Console.h>
-#include <getopt.h>
 
 #define CU_ERROR_CHECK(expr) \
   do { \
