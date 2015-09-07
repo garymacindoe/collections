@@ -9,4 +9,6 @@ test:
 	true
 
 clean:
+	$(RM) cunit/cunit_automated.o cunit/cunit_basic.o cunit/cunit_console.o
+	$(RM) CUnitAutomated-Results.xml CUnitAutomated-Listing.xml
 	$(RM) *.o
