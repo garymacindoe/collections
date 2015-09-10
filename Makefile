@@ -17,12 +17,13 @@ clean:
 	$(RM) CUnitAutomated-Results.xml CUnitAutomated-Listing.xml
 	$(RM) test/test_sort.o
 
-libcollections.a: src/insertion_sort.o src/selection_sort.o src/merge_sort.o
+libcollections.a: src/insertion_sort.o src/selection_sort.o src/merge_sort.o src/bubble_sort.o
 	$(AR) $(ARFLAGS) $(@) $(^)
 
 src/insertion_sort.o: include/sort.h
 src/selection_sort.o: include/sort.h
 src/merge_sort.o: include/sort.h
+src/bubble_sort.o: include/sort.h
 
 test/test_sort.o: include/sort.h
 
