@@ -51,13 +51,24 @@ static void test_linear_search() {
   CU_ASSERT(*(int *)linear_search(&needle, haystack, N, sizeof(int), compare) == needle);
 }
 
+static void test_binary_search() {
+  const int needle = 5;
+  CU_ASSERT(*(int *)binary_search(&needle, haystack, N, sizeof(int), compare) == needle);
+}
+
 static const CU_TestInfo tests[] = {
   { "linear search", test_linear_search },
   CU_TEST_INFO_NULL
 };
 
+static const CU_TestInfo tests_sorted[] = {
+  { "linear search", test_linear_search },
+  { "binary search", test_binary_search },
+  CU_TEST_INFO_NULL
+};
+
 const CU_SuiteInfo suites[] = {
-  { "search ascending", suite_init, suite_cleanup, setup_ascending, NULL, (CU_TestInfo *)tests },
+  { "search ascending", suite_init, suite_cleanup, setup_ascending, NULL, (CU_TestInfo *)tests_sorted },
   { "search descending", suite_init, suite_cleanup, setup_descending, NULL, (CU_TestInfo *)tests },
   { "search random", suite_init, suite_cleanup, setup_random, NULL, (CU_TestInfo *)tests },
   CU_SUITE_INFO_NULL
