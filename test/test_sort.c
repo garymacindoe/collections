@@ -69,10 +69,17 @@ static void test_merge_sort() {
     CU_ASSERT(array[i - 1] <= array[i]);
 }
 
+static void test_bubble_sort() {
+  bubble_sort(array, N, sizeof(int), compare);
+  for (int i = 1; i < N; i++)
+    CU_ASSERT(array[i - 1] <= array[i]);
+}
+
 static const CU_TestInfo tests[] = {
   { "insertion sort", test_insertion_sort },
   { "selection sort", test_selection_sort },
   { "merge sort", test_merge_sort },
+  { "bubble sort", test_bubble_sort },
   CU_TEST_INFO_NULL
 };
 
