@@ -1,14 +1,5 @@
 #include "sort.h"
-#include <stdbool.h>
-
-#define COPY(x, y, n) \
- do { \
-   char * __a = (x); \
-   const char * __b = (y); \
-   size_t __i = (n); \
-   while (__i-- > 0) \
-     *__a++ = *__b++; \
- } while (false)
+#include "copy.h"
 
 void insertion_sort(void * base, size_t nmemb, size_t size,
                     int (*compar)(const void *, const void *)) {
