@@ -20,10 +20,10 @@ clean:
 libcollections.a: src/insertion_sort.o src/selection_sort.o src/merge_sort.o src/bubble_sort.o
 	$(AR) $(ARFLAGS) $(@) $(^)
 
-src/insertion_sort.o: include/sort.h
-src/selection_sort.o: include/sort.h
-src/merge_sort.o: include/sort.h
-src/bubble_sort.o: include/sort.h
+src/insertion_sort.o: include/sort.h src/copy.h
+src/selection_sort.o: include/sort.h src/swap.h
+src/merge_sort.o: include/sort.h src/copy.h
+src/bubble_sort.o: include/sort.h src/swap.h
 
 test/test_sort.o: include/sort.h
 
