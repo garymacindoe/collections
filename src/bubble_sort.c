@@ -1,14 +1,5 @@
 #include "sort.h"
-#include <stdbool.h>
-
-#define SWAP(x, y, n) \
- do { \
-   char * __a = (x), * __b = (y), __c; \
-   size_t __i = (n);\
-   while (__i-- > 0) { \
-     __c = *__a; *__a++ = *__b; *__b++ = __c; \
-   } \
- } while (false)
+#include "swap.h"
 
 void bubble_sort(void * base, size_t nmemb, size_t size,
                  int (*compar)(const void *, const void *)) {
