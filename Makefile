@@ -3,7 +3,7 @@ CFLAGS = -std=c99 -pedantic -Wall -Wextra -Wconversion -O2
 LDLIBS = -lcunit
 
 SEARCH_OBJS = src/linear_search.o src/binary_search.o
-SORT_OBJS = src/insertion_sort.o src/selection_sort.o src/merge_sort.o src/bubble_sort.o
+SORT_OBJS = src/insertion_sort.o src/selection_sort.o src/merge_sort.o src/bubble_sort.o src/heap_sort.o
 HEAP_OBJS = src/make_heap.o
 
 .PHONY: all test clean
