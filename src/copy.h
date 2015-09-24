@@ -1,6 +1,7 @@
 #ifndef COPY_H
 #define COPY_H
 
+#include <stddef.h>
 #include <stdbool.h>
 
 #define COPY(x, y, n) \

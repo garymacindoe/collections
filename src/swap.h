@@ -1,6 +1,7 @@
 #ifndef SWAP_H
 #define SWAP_H
 
+#include <stddef.h>
 #include <stdbool.h>
 
 #define SWAP(x, y, n) \
