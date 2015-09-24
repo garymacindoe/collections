@@ -32,3 +32,4 @@
 *.dSYM/
 test_sort
 test_search
+test_heap
